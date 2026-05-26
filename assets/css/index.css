@@ -1,0 +1,8 @@
+@import "variables.css";
+@import "global/base.css";
+@import "global/utilities.css";
+@import "pages/index/hero-section.css";
+@import "pages/index/about-section.css";
+@import "pages/index/how-it-works.css";
+@import "pages/index/download-app.css";
+@import "pages/index/contact-section.css";

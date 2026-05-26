@@ -1,0 +1,14 @@
+:root {
+  --primary-color: #FF9900;
+  --primary-dark: #e68a00;
+  --primary-light: #ffad33;
+
+  --neutral-50: #FFFDF9;
+  --neutral-100: #f3f4f6;
+  --neutral-800: #2A2A2A;
+  --neutral-900: #18181b;
+
+  --border-radius: 16px;
+  --transition-fast: .3s ease;
+  --transition-slow: .6s ease;
+}

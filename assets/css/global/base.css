@@ -1,0 +1,4 @@
+/* Tailwind will be injected here if compiled, but since we use CDN, we just use this for custom base rules */
+body {
+    background-color: var(--neutral-50);
+}
