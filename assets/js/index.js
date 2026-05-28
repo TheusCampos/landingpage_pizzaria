@@ -7,7 +7,7 @@ tailwind.config = {
             colors: {
                 primary: '#FF9900',
                 dark: '#2A2A2A',
-                light: '#888888',
+                light: '#555555', /* Changed from #888888 for better WCAG color contrast */
                 bgLight: '#FFFDF9'
             }
         }

@@ -3,11 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pizzaria Landing Page</title>
+    <title>Pizzaria Landing Page | A Melhor Pizza da Cidade</title>
+    <meta name="description" content="Experimente as melhores pizzas e pratos. Qualidade, sabor incrível e entrega super rápida. Faça seu pedido agora mesmo!">
+    <meta name="theme-color" content="#FF9900">
+    
+    <!-- Open Graph / SEO -->
+    <meta property="og:title" content="Pizzaria Landing Page | A Melhor Pizza da Cidade">
+    <meta property="og:description" content="Experimente as melhores pizzas e pratos. Qualidade, sabor incrível e entrega super rápida.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://i.pinimg.com/736x/22/67/43/2267432b937ae2b03e1d40c467ff285e.jpg">
+    <meta name="robots" content="index, follow">
+
+    <!-- Preconnect & Preload -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://i.pinimg.com/736x/22/67/43/2267432b937ae2b03e1d40c467ff285e.jpg" as="image" fetchpriority="high">
+    
+    <!-- Tailwind via CDN (Not recommended for prod, but kept as is per setup) -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- CSS & Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
     <link rel="stylesheet" href="assets/css/index.css">
+    
     <script src="assets/js/index.js"></script>
 </head>
 <body class="text-dark antialiased overflow-x-hidden relative">
@@ -25,9 +45,9 @@
             <a href="#" class="hover:text-primary transition">Contato</a>
         </div>
         <div class="flex items-center gap-6">
-            <button class="hover:text-primary transition"><i class="fa-solid fa-magnifying-glass"></i></button>
-            <button class="hover:text-primary transition relative">
-                <i class="fa-solid fa-cart-shopping"></i>
+            <button class="hover:text-primary transition" aria-label="Buscar pratos"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></button>
+            <button class="hover:text-primary transition relative" aria-label="Ver carrinho de compras">
+                <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
                 <span class="absolute -top-2 -right-2 bg-primary text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center">0</span>
             </button>
         </div>
@@ -54,11 +74,11 @@
         </div>
         <div class="md:w-1/2 relative hero-images">
             <div class="relative w-full max-w-lg mx-auto">
-                <img src="./assets/img/hero-01.png" alt="Delicious Pasta" class="rounded-full w-full h-auto object-cover border-8 border-white shadow-2xl relative z-10 aspect-square hero-main-img">
+                <img src="https://i.pinimg.com/736x/22/67/43/2267432b937ae2b03e1d40c467ff285e.jpg" alt="Delicioso prato de macarrão" width="512" height="512" fetchpriority="high" class="rounded-full w-full h-auto object-cover border-8 border-white shadow-2xl relative z-10 aspect-square hero-main-img">
                 <!-- Floating elements (simulated with absolute positioning) -->
-                <img src="./assets/img/hero-02.png" alt="Salad" class="absolute top-10 -right-10 w-24 h-24 rounded-full border-4 border-white shadow-lg object-cover z-20 float-img-1">
-                <img src="./assets/img/hero-03.png" alt="Bowl" class="absolute bottom-20 -right-5 w-20 h-20 rounded-full border-4 border-white shadow-lg object-cover z-20 float-img-2">
-                <img src="./assets/img/hero-04.png" alt="Pizza" class="absolute -bottom-10 left-20 w-40 h-40 rounded-full border-4 border-white shadow-lg object-cover z-20 float-img-3">
+                <img src="https://i.pinimg.com/736x/41/17/6d/41176da1c0268396ac6499e488973dbb.jpg" alt="Salada fresca" width="96" height="96" loading="lazy" decoding="async" class="absolute top-10 -right-10 w-24 h-24 rounded-full border-4 border-white shadow-lg object-cover z-20 float-img-1">
+                <img src="https://i.pinimg.com/1200x/ff/c3/f8/ffc3f87ec064d00c50f4b13fc33887c5.jpg" alt="Tigela de acompanhamento" width="80" height="80" loading="lazy" decoding="async" class="absolute bottom-20 -right-5 w-20 h-20 rounded-full border-4 border-white shadow-lg object-cover z-20 float-img-2">
+                <img src="https://i.pinimg.com/1200x/74/98/1c/74981ce72a4a5aedfb01795db3022a4d.jpg" alt="Pizza" width="160" height="160" loading="lazy" decoding="async" class="absolute -bottom-10 left-20 w-40 h-40 rounded-full border-4 border-white shadow-lg object-cover z-20 float-img-3">
             </div>
         </div>
     </section>
@@ -102,21 +122,21 @@
             <!-- Card 1 -->
             <div class="bg-white rounded-2xl border border-gray-100 p-4 hover:shadow-xl hover:-translate-y-1 pop-card group duration-300">
                 <div class="relative overflow-hidden rounded-xl mb-5">
-                    <img src="./assets/img/imagem-01.jpg" alt="Pizza Margherita" class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500">
+                    <img src="./assets/img/imagem-01.jpg" alt="Pizza Margherita" width="600" height="450" loading="lazy" decoding="async" class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500">
                     <div class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm px-2 py-1 rounded text-[10px] font-bold text-dark uppercase tracking-wider shadow-sm">Top 1</div>
                 </div>
                 <div class="flex justify-between items-start mb-2">
                     <h3 class="font-bold text-lg text-dark">Pizza Margherita</h3>
                     <div class="flex items-center gap-1 text-primary text-xs bg-orange-50 px-2 py-1 rounded-md">
-                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star" aria-hidden="true"></i>
                         <span class="text-dark font-bold">4.9</span>
                     </div>
                 </div>
                 <p class="text-light text-sm mb-5 line-clamp-2 leading-relaxed">Massa artesanal, molho de tomate fresco, mozzarella de búfala e manjericão.</p>
                 <div class="flex justify-between items-center pt-4 border-t border-gray-50">
                     <span class="font-bold text-xl text-dark">R$ 45,90</span>
-                    <button class="w-10 h-10 rounded-full bg-gray-50 text-dark flex items-center justify-center hover:bg-primary hover:text-white transition-colors duration-300">
-                        <i class="fa-solid fa-plus"></i>
+                    <button class="w-10 h-10 rounded-full bg-gray-50 text-dark flex items-center justify-center hover:bg-primary hover:text-white transition-colors duration-300" aria-label="Adicionar Pizza Margherita">
+                        <i class="fa-solid fa-plus" aria-hidden="true"></i>
                     </button>
                 </div>
             </div>
@@ -124,20 +144,20 @@
             <!-- Card 2 -->
             <div class="bg-white rounded-2xl border border-gray-100 p-4 hover:shadow-xl hover:-translate-y-1 pop-card group duration-300">
                 <div class="relative overflow-hidden rounded-xl mb-5">
-                    <img src="./assets/img/imagem-02.jpg" alt="Pizza Pepperoni" class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500">
+                    <img src="./assets/img/imagem-02.jpg" alt="Pizza Pepperoni" width="600" height="450" loading="lazy" decoding="async" class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500">
                 </div>
                 <div class="flex justify-between items-start mb-2">
                     <h3 class="font-bold text-lg text-dark">Pizza Pepperoni</h3>
                     <div class="flex items-center gap-1 text-primary text-xs bg-orange-50 px-2 py-1 rounded-md">
-                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star" aria-hidden="true"></i>
                         <span class="text-dark font-bold">4.8</span>
                     </div>
                 </div>
                 <p class="text-light text-sm mb-5 line-clamp-2 leading-relaxed">Massa fina, mozzarella, fatias de pepperoni premium e toque de orégano.</p>
                 <div class="flex justify-between items-center pt-4 border-t border-gray-50">
                     <span class="font-bold text-xl text-dark">R$ 52,90</span>
-                    <button class="w-10 h-10 rounded-full bg-gray-50 text-dark flex items-center justify-center hover:bg-primary hover:text-white transition-colors duration-300">
-                        <i class="fa-solid fa-plus"></i>
+                    <button class="w-10 h-10 rounded-full bg-gray-50 text-dark flex items-center justify-center hover:bg-primary hover:text-white transition-colors duration-300" aria-label="Adicionar Pizza Pepperoni">
+                        <i class="fa-solid fa-plus" aria-hidden="true"></i>
                     </button>
                 </div>
             </div>
@@ -145,21 +165,21 @@
             <!-- Card 3 -->
             <div class="bg-white rounded-2xl border border-gray-100 p-4 hover:shadow-xl hover:-translate-y-1 pop-card group duration-300">
                 <div class="relative overflow-hidden rounded-xl mb-5">
-                    <img src="./assets/img/imagem-03.jpg" alt="Pasta Carbonara" class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500">
+                    <img src="./assets/img/imagem-03.jpg" alt="Pasta Carbonara" width="600" height="450" loading="lazy" decoding="async" class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500">
                     <div class="absolute top-3 left-3 bg-primary text-white px-2 py-1 rounded text-[10px] font-bold uppercase tracking-wider shadow-md">Novo</div>
                 </div>
                 <div class="flex justify-between items-start mb-2">
                     <h3 class="font-bold text-lg text-dark">Pasta Carbonara</h3>
                     <div class="flex items-center gap-1 text-primary text-xs bg-orange-50 px-2 py-1 rounded-md">
-                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star" aria-hidden="true"></i>
                         <span class="text-dark font-bold">4.9</span>
                     </div>
                 </div>
                 <p class="text-light text-sm mb-5 line-clamp-2 leading-relaxed">Spaghetti al dente com pancetta autêntica, gema de ovo e queijo pecorino.</p>
                 <div class="flex justify-between items-center pt-4 border-t border-gray-50">
                     <span class="font-bold text-xl text-dark">R$ 48,50</span>
-                    <button class="w-10 h-10 rounded-full bg-gray-50 text-dark flex items-center justify-center hover:bg-primary hover:text-white transition-colors duration-300">
-                        <i class="fa-solid fa-plus"></i>
+                    <button class="w-10 h-10 rounded-full bg-gray-50 text-dark flex items-center justify-center hover:bg-primary hover:text-white transition-colors duration-300" aria-label="Adicionar Pasta Carbonara">
+                        <i class="fa-solid fa-plus" aria-hidden="true"></i>
                     </button>
                 </div>
             </div>
@@ -167,20 +187,20 @@
             <!-- Card 4 -->
             <div class="bg-white rounded-2xl border border-gray-100 p-4 hover:shadow-xl hover:-translate-y-1 pop-card group duration-300">
                 <div class="relative overflow-hidden rounded-xl mb-5">
-                    <img src="./assets/img/imagem-04.jpg" alt="Salada Caprese" class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500">
+                    <img src="./assets/img/imagem-04.jpg" alt="Salada Caprese" width="600" height="450" loading="lazy" decoding="async" class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500">
                 </div>
                 <div class="flex justify-between items-start mb-2">
                     <h3 class="font-bold text-lg text-dark">Salada Caprese</h3>
                     <div class="flex items-center gap-1 text-primary text-xs bg-orange-50 px-2 py-1 rounded-md">
-                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star" aria-hidden="true"></i>
                         <span class="text-dark font-bold">4.7</span>
                     </div>
                 </div>
                 <p class="text-light text-sm mb-5 line-clamp-2 leading-relaxed">Tomates frescos, mozzarella de búfala, manjericão e azeite trufado.</p>
                 <div class="flex justify-between items-center pt-4 border-t border-gray-50">
                     <span class="font-bold text-xl text-dark">R$ 32,90</span>
-                    <button class="w-10 h-10 rounded-full bg-gray-50 text-dark flex items-center justify-center hover:bg-primary hover:text-white transition-colors duration-300">
-                        <i class="fa-solid fa-plus"></i>
+                    <button class="w-10 h-10 rounded-full bg-gray-50 text-dark flex items-center justify-center hover:bg-primary hover:text-white transition-colors duration-300" aria-label="Adicionar Salada Caprese">
+                        <i class="fa-solid fa-plus" aria-hidden="true"></i>
                     </button>
                 </div>
             </div>
@@ -201,7 +221,7 @@
             <!-- Feature 1 -->
             <div class="p-8 feat-card">
                 <div class="w-16 h-16 rounded-full bg-orange-50 text-primary flex items-center justify-center text-2xl mx-auto mb-6">
-                    <i class="fa-solid fa-medal"></i>
+                    <i class="fa-solid fa-medal" aria-hidden="true"></i>
                 </div>
                 <h3 class="font-bold text-xl mb-4">Qualidade</h3>
                 <p class="text-light text-sm leading-relaxed">Ingredientes selecionados todos os dias para garantir o melhor prato na sua mesa.</p>
@@ -210,7 +230,7 @@
             <!-- Feature 2 (Highlighted) -->
             <div class="p-8 bg-white rounded-3xl shadow-custom transform -translate-y-4 feat-card">
                 <div class="w-16 h-16 rounded-full bg-orange-50 text-primary flex items-center justify-center text-2xl mx-auto mb-6">
-                    <i class="fa-solid fa-bowl-food"></i>
+                    <i class="fa-solid fa-bowl-food" aria-hidden="true"></i>
                 </div>
                 <h3 class="font-bold text-xl mb-4">Sabor Incrível</h3>
                 <p class="text-light text-sm leading-relaxed">Receitas originais feitas por chefs experientes com um toque caseiro que você vai amar.</p>
@@ -219,7 +239,7 @@
             <!-- Feature 3 -->
             <div class="p-8 feat-card">
                 <div class="w-16 h-16 rounded-full bg-orange-50 text-primary flex items-center justify-center text-2xl mx-auto mb-6">
-                    <i class="fa-solid fa-truck-fast"></i>
+                    <i class="fa-solid fa-truck-fast" aria-hidden="true"></i>
                 </div>
                 <h3 class="font-bold text-xl mb-4">Entrega Rápida</h3>
                 <p class="text-light text-sm leading-relaxed">Seu pedido chega quentinho e no tempo certo para matar a sua fome sem demora.</p>
@@ -265,9 +285,9 @@
                         
                         <div class="flex flex-col md:flex-row items-center md:items-start gap-6">
                             <div class="bg-orange-50 w-24 h-24 shrink-0 rounded-full flex items-center justify-center relative">
-                                <img src="https://images.unsplash.com/photo-1555072956-7758afb20e8f?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Choose Order" class="w-20 h-20 object-cover rounded-full">
+                                <img src="https://images.unsplash.com/photo-1555072956-7758afb20e8f?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Escolha seu Prato" width="80" height="80" loading="lazy" decoding="async" class="w-20 h-20 object-cover rounded-full">
                                 <div class="absolute -bottom-2 -right-2 bg-white w-8 h-8 rounded-full flex items-center justify-center text-primary shadow-md text-sm">
-                                    <i class="fa-solid fa-utensils"></i>
+                                    <i class="fa-solid fa-utensils" aria-hidden="true"></i>
                                 </div>
                             </div>
                             <div>
@@ -285,9 +305,9 @@
                         
                         <div class="flex flex-col md:flex-row items-center md:items-start gap-6">
                             <div class="bg-orange-50 w-24 h-24 shrink-0 rounded-full flex items-center justify-center relative">
-                                <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Payment" class="w-20 h-20 object-cover rounded-full">
+                                <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Pagamento" width="80" height="80" loading="lazy" decoding="async" class="w-20 h-20 object-cover rounded-full">
                                 <div class="absolute -bottom-2 -right-2 bg-white w-8 h-8 rounded-full flex items-center justify-center text-primary shadow-md text-sm">
-                                    <i class="fa-solid fa-credit-card"></i>
+                                    <i class="fa-solid fa-credit-card" aria-hidden="true"></i>
                                 </div>
                             </div>
                             <div>
@@ -305,9 +325,9 @@
                         
                         <div class="flex flex-col md:flex-row items-center md:items-start gap-6">
                             <div class="bg-orange-50 w-24 h-24 shrink-0 rounded-full flex items-center justify-center relative">
-                                <img src="https://images.unsplash.com/photo-1526367790999-0150786686a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Delivery" class="w-20 h-20 object-cover rounded-full">
+                                <img src="https://images.unsplash.com/photo-1526367790999-0150786686a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Entrega" width="80" height="80" loading="lazy" decoding="async" class="w-20 h-20 object-cover rounded-full">
                                 <div class="absolute -bottom-2 -right-2 bg-white w-8 h-8 rounded-full flex items-center justify-center text-primary shadow-md text-sm">
-                                    <i class="fa-solid fa-motorcycle"></i>
+                                    <i class="fa-solid fa-motorcycle" aria-hidden="true"></i>
                                 </div>
                             </div>
                             <div>
@@ -340,14 +360,14 @@
                 </p>
                 <div class="flex flex-wrap gap-4 download-buttons">
                     <button class="bg-dark hover:bg-black text-white px-6 py-3 rounded-xl flex items-center gap-3 transition">
-                        <i class="fa-brands fa-apple text-2xl"></i>
+                        <i class="fa-brands fa-apple text-2xl" aria-hidden="true"></i>
                         <div class="text-left">
                             <div class="text-[10px] text-gray-300">Baixar na</div>
                             <div class="font-bold text-sm">App Store</div>
                         </div>
                     </button>
                     <button class="bg-white hover:bg-gray-100 text-dark px-6 py-3 rounded-xl flex items-center gap-3 transition shadow-lg">
-                        <i class="fa-brands fa-google-play text-primary text-2xl"></i>
+                        <i class="fa-brands fa-google-play text-primary text-2xl" aria-hidden="true"></i>
                         <div class="text-left">
                             <div class="text-[10px] text-gray-500">Disponível no</div>
                             <div class="font-bold text-sm">Google Play</div>
@@ -366,14 +386,14 @@
                             <h4 class="font-bold text-xl mb-1">Olá, Maria!</h4>
                             <p class="text-xs opacity-80 mb-4">O que vamos pedir hoje?</p>
                             <div class="bg-white/20 rounded-full p-2 flex items-center gap-2">
-                                <i class="fa-solid fa-search ml-2"></i>
+                                <i class="fa-solid fa-search ml-2" aria-hidden="true"></i>
                                 <div class="text-xs">Buscar comida...</div>
                             </div>
                         </div>
                         <div class="p-4 -mt-6">
                             <div class="bg-white rounded-xl shadow-lg p-3 flex gap-3 mb-3">
                                 <div class="w-16 h-16 bg-gray-200 rounded-lg overflow-hidden">
-                                    <img src="./assets/img/imagem-03.jpg" class="w-full h-full object-cover">
+                                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Pizza" width="64" height="64" loading="lazy" decoding="async" class="w-full h-full object-cover">
                                 </div>
                                 <div>
                                     <div class="font-bold text-sm">Pizza Margherita</div>
@@ -382,7 +402,7 @@
                             </div>
                             <div class="bg-white rounded-xl shadow-lg p-3 flex gap-3">
                                 <div class="w-16 h-16 bg-gray-200 rounded-lg overflow-hidden">
-                                    <img src="./assets/img/imagem-04.jpg" class="w-full h-full object-cover">
+                                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Salada" width="64" height="64" loading="lazy" decoding="async" class="w-full h-full object-cover">
                                 </div>
                                 <div>
                                     <div class="font-bold text-sm">Salada Fresh</div>
@@ -446,8 +466,8 @@
             <div class="md:w-1/2 relative testimonials-images">
                 <div class="testimonial-bg-shape hidden md:block"></div>
                 <div class="relative z-10 w-full max-w-md mx-auto">
-                    <img src="./assets/img/imagem-01.jpg" alt="Pasta Dish" class="rounded-full w-full aspect-square object-cover shadow-2xl border-8 border-white testi-main-img">
-                    <img src="./assets/img/imagem-02.jpg" alt="Chili Sauce" class="absolute -right-5 bottom-0 h-64 object-contain drop-shadow-2xl z-20 testi-float-img">
+                    <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Prato de Massa" width="800" height="800" loading="lazy" decoding="async" class="rounded-full w-full aspect-square object-cover shadow-2xl border-8 border-white testi-main-img">
+                    <img src="https://images.unsplash.com/photo-1585238342024-78d387f4a707?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Molho de Pimenta" width="400" height="400" loading="lazy" decoding="async" class="absolute -right-5 bottom-0 h-64 object-contain drop-shadow-2xl z-20 testi-float-img">
                 </div>
             </div>
         </div>
@@ -463,17 +483,17 @@
                         <img src="./assets/img/Logo-pizzera.png" alt="Pizzera" class="w-12 h-12">
                     </div>
                     <div class="flex gap-4">
-                        <a href="#" class="w-8 h-8 rounded-full bg-orange-50 text-primary flex items-center justify-center hover:bg-primary hover:text-white transition">
-                            <i class="fa-brands fa-facebook-f text-sm"></i>
+                        <a href="#" class="w-8 h-8 rounded-full bg-orange-50 text-primary flex items-center justify-center hover:bg-primary hover:text-white transition" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook-f text-sm" aria-hidden="true"></i>
                         </a>
-                        <a href="#" class="w-8 h-8 rounded-full bg-orange-50 text-primary flex items-center justify-center hover:bg-primary hover:text-white transition">
-                            <i class="fa-brands fa-twitter text-sm"></i>
+                        <a href="#" class="w-8 h-8 rounded-full bg-orange-50 text-primary flex items-center justify-center hover:bg-primary hover:text-white transition" aria-label="Twitter">
+                            <i class="fa-brands fa-twitter text-sm" aria-hidden="true"></i>
                         </a>
-                        <a href="#" class="w-8 h-8 rounded-full bg-orange-50 text-primary flex items-center justify-center hover:bg-primary hover:text-white transition">
-                            <i class="fa-brands fa-instagram text-sm"></i>
+                        <a href="#" class="w-8 h-8 rounded-full bg-orange-50 text-primary flex items-center justify-center hover:bg-primary hover:text-white transition" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram text-sm" aria-hidden="true"></i>
                         </a>
-                        <a href="#" class="w-8 h-8 rounded-full bg-orange-50 text-primary flex items-center justify-center hover:bg-primary hover:text-white transition">
-                            <i class="fa-brands fa-linkedin-in text-sm"></i>
+                        <a href="#" class="w-8 h-8 rounded-full bg-orange-50 text-primary flex items-center justify-center hover:bg-primary hover:text-white transition" aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in text-sm" aria-hidden="true"></i>
                         </a>
                     </div>
                 </div>
@@ -510,19 +530,20 @@
                 <!-- Subscribe -->
                 <div>
                     <h4 class="font-bold text-lg mb-6">Inscreva-se</h4>
-                    <div class="relative">
-                        <input type="email" placeholder="Digite seu e-mail" class="w-full bg-gray-50 rounded-full py-3 px-6 text-sm outline-none focus:ring-2 focus:ring-primary/50 transition">
-                        <button class="absolute right-1 top-1 bottom-1 bg-primary text-white w-10 rounded-full flex items-center justify-center hover:bg-orange-600 transition">
-                            <i class="fa-solid fa-arrow-right"></i>
+                    <form class="relative" action="#" method="POST" onsubmit="event.preventDefault();">
+                        <label for="newsletter-email" class="sr-only">Digite seu e-mail</label>
+                        <input id="newsletter-email" name="email" type="email" placeholder="Digite seu e-mail" required class="w-full bg-gray-50 rounded-full py-3 px-6 text-sm outline-none focus:ring-2 focus:ring-primary/50 transition">
+                        <button type="submit" class="absolute right-1 top-1 bottom-1 bg-primary text-white w-10 rounded-full flex items-center justify-center hover:bg-orange-600 transition" aria-label="Inscrever-se">
+                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                         </button>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="assets/js/animations.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+    <script src="assets/js/animations.js" defer></script>
 </body>
 </html>
