@@ -11,13 +11,14 @@
     <meta property="og:title" content="Pizzaria Landing Page | A Melhor Pizza da Cidade">
     <meta property="og:description" content="Experimente as melhores pizzas e pratos. Qualidade, sabor incrível e entrega super rápida.">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://i.pinimg.com/736x/22/67/43/2267432b937ae2b03e1d40c467ff285e.jpg">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60&fm=webp">
     <meta name="robots" content="index, follow">
 
     <!-- Preconnect & Preload -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://i.pinimg.com/736x/22/67/43/2267432b937ae2b03e1d40c467ff285e.jpg" as="image" fetchpriority="high">
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link rel="preload" href="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=60&fm=webp" as="image" fetchpriority="high">
     
     <!-- Tailwind via CDN (Not recommended for prod, but kept as is per setup) -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -74,11 +75,11 @@
         </div>
         <div class="md:w-1/2 relative hero-images">
             <div class="relative w-full max-w-lg mx-auto">
-                <img src="https://i.pinimg.com/736x/22/67/43/2267432b937ae2b03e1d40c467ff285e.jpg" alt="Delicioso prato de macarrão" width="512" height="512" fetchpriority="high" class="rounded-full w-full h-auto object-cover border-8 border-white shadow-2xl relative z-10 aspect-square hero-main-img">
+                <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=60&fm=webp" alt="Delicioso prato de macarrão" width="512" height="512" fetchpriority="high" class="rounded-full w-full h-auto object-cover border-8 border-white shadow-2xl relative z-10 aspect-square hero-main-img">
                 <!-- Floating elements (simulated with absolute positioning) -->
-                <img src="https://i.pinimg.com/736x/41/17/6d/41176da1c0268396ac6499e488973dbb.jpg" alt="Salada fresca" width="96" height="96" loading="lazy" decoding="async" class="absolute top-10 -right-10 w-24 h-24 rounded-full border-4 border-white shadow-lg object-cover z-20 float-img-1">
-                <img src="https://i.pinimg.com/1200x/ff/c3/f8/ffc3f87ec064d00c50f4b13fc33887c5.jpg" alt="Tigela de acompanhamento" width="80" height="80" loading="lazy" decoding="async" class="absolute bottom-20 -right-5 w-20 h-20 rounded-full border-4 border-white shadow-lg object-cover z-20 float-img-2">
-                <img src="https://i.pinimg.com/1200x/74/98/1c/74981ce72a4a5aedfb01795db3022a4d.jpg" alt="Pizza" width="160" height="160" loading="lazy" decoding="async" class="absolute -bottom-10 left-20 w-40 h-40 rounded-full border-4 border-white shadow-lg object-cover z-20 float-img-3">
+                <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=60&fm=webp" alt="Salada fresca" width="96" height="96" class="absolute top-10 -right-10 w-24 h-24 rounded-full border-4 border-white shadow-lg object-cover z-20 float-img-1">
+                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=60&fm=webp" alt="Tigela de acompanhamento" width="80" height="80" class="absolute bottom-20 -right-5 w-20 h-20 rounded-full border-4 border-white shadow-lg object-cover z-20 float-img-2">
+                <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=60&fm=webp" alt="Pizza" width="160" height="160" class="absolute -bottom-10 left-20 w-40 h-40 rounded-full border-4 border-white shadow-lg object-cover z-20 float-img-3">
             </div>
         </div>
     </section>
@@ -122,7 +123,7 @@
             <!-- Card 1 -->
             <div class="bg-white rounded-2xl border border-gray-100 p-4 hover:shadow-xl hover:-translate-y-1 pop-card group duration-300">
                 <div class="relative overflow-hidden rounded-xl mb-5">
-                    <img src="./assets/img/imagem-01.jpg" alt="Pizza Margherita" width="600" height="450" loading="lazy" decoding="async" class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=60&fm=webp" alt="Pizza Margherita" width="600" height="450" loading="lazy" decoding="async" class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500">
                     <div class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm px-2 py-1 rounded text-[10px] font-bold text-dark uppercase tracking-wider shadow-sm">Top 1</div>
                 </div>
                 <div class="flex justify-between items-start mb-2">
@@ -165,7 +166,7 @@
             <!-- Card 3 -->
             <div class="bg-white rounded-2xl border border-gray-100 p-4 hover:shadow-xl hover:-translate-y-1 pop-card group duration-300">
                 <div class="relative overflow-hidden rounded-xl mb-5">
-                    <img src="./assets/img/imagem-03.jpg" alt="Pasta Carbonara" width="600" height="450" loading="lazy" decoding="async" class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500">
+                    <img src="https://images.unsplash.com/photo-1612874742237-6526221588e3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=60&fm=webp" alt="Pasta Carbonara" width="600" height="450" loading="lazy" decoding="async" class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500">
                     <div class="absolute top-3 left-3 bg-primary text-white px-2 py-1 rounded text-[10px] font-bold uppercase tracking-wider shadow-md">Novo</div>
                 </div>
                 <div class="flex justify-between items-start mb-2">
@@ -187,7 +188,7 @@
             <!-- Card 4 -->
             <div class="bg-white rounded-2xl border border-gray-100 p-4 hover:shadow-xl hover:-translate-y-1 pop-card group duration-300">
                 <div class="relative overflow-hidden rounded-xl mb-5">
-                    <img src="./assets/img/imagem-04.jpg" alt="Salada Caprese" width="600" height="450" loading="lazy" decoding="async" class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500">
+                    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=60&fm=webp" alt="Salada Caprese" width="600" height="450" loading="lazy" decoding="async" class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500">
                 </div>
                 <div class="flex justify-between items-start mb-2">
                     <h3 class="font-bold text-lg text-dark">Salada Caprese</h3>

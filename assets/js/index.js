@@ -5,9 +5,9 @@ tailwind.config = {
                 sans: ['Poppins', 'sans-serif'],
             },
             colors: {
-                primary: '#FF9900',
+                primary: '#D04A02', /* Darker orange for better WCAG color contrast */
                 dark: '#2A2A2A',
-                light: '#555555', /* Changed from #888888 for better WCAG color contrast */
+                light: '#555555',
                 bgLight: '#FFFDF9'
             }
         }
