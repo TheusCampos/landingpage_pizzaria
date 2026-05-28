@@ -20,16 +20,18 @@
     <link rel="preconnect" href="https://images.unsplash.com">
     <link rel="preload" href="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=60&fm=webp" as="image" fetchpriority="high">
     
-    <!-- Tailwind via CDN (Not recommended for prod, but kept as is per setup) -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
     <!-- CSS & Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"></noscript>
+    
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
-    <link rel="stylesheet" href="assets/css/index.css">
     
+    <!-- Tailwind via CDN (Best practice for simple HTML without build step) -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="assets/js/index.js"></script>
+
+    <link rel="stylesheet" href="assets/css/index.css">
 </head>
 <body class="text-dark antialiased overflow-x-hidden relative">
 
@@ -116,7 +118,7 @@
                 </div>
                 <h2 class="text-4xl font-bold">Mais <span class="text-primary">Procurados</span></h2>
             </div>
-            <a href="#" class="hidden md:flex items-center gap-2 text-sm font-medium hover:text-primary transition">Ver todo o menu <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="#" class="hidden md:flex items-center gap-2 text-sm font-medium hover:text-primary transition">Ver todo o menu <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
         </div>
         
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 popular-cards">
@@ -384,7 +386,7 @@
                     <div class="w-full h-full bg-white relative">
                         <!-- App Content Mockup -->
                         <div class="bg-primary h-48 w-full rounded-b-3xl p-6 pt-12 text-white">
-                            <h4 class="font-bold text-xl mb-1">Olá, Maria!</h4>
+                            <h3 class="font-bold text-xl mb-1">Olá, Maria!</h3>
                             <p class="text-xs opacity-80 mb-4">O que vamos pedir hoje?</p>
                             <div class="bg-white/20 rounded-full p-2 flex items-center gap-2">
                                 <i class="fa-solid fa-search ml-2" aria-hidden="true"></i>
@@ -426,19 +428,19 @@
                 <div class="bg-white p-10 rounded-3xl shadow-custom relative">
                     <!-- Quote mark icon -->
                     <div class="text-primary text-4xl absolute top-6 left-6 opacity-10">
-                        <i class="fa-solid fa-quote-left"></i>
+                        <i class="fa-solid fa-quote-left" aria-hidden="true"></i>
                     </div>
                     
                     <div class="flex items-center gap-4 mb-6 relative z-10">
-                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Mary Luketch" class="w-14 h-14 rounded-full object-cover">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Maria Silva" class="w-14 h-14 rounded-full object-cover">
                         <div>
-                            <h4 class="font-bold">Maria Silva</h4>
+                            <h3 class="font-bold">Maria Silva</h3>
                             <div class="text-primary text-xs flex gap-1">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                <i class="fa-solid fa-star" aria-hidden="true"></i>
                             </div>
                         </div>
                     </div>
@@ -501,7 +503,7 @@
 
                 <!-- Opening Hours -->
                 <div>
-                    <h4 class="font-bold text-lg mb-6">Horário de Funcionamento</h4>
+                    <h3 class="font-bold text-lg mb-6">Horário de Funcionamento</h3>
                     <ul class="space-y-3 text-light text-sm">
                         <li class="flex justify-between"><span>Seg - Sex:</span> <span>09:00 - 21:00</span></li>
                         <li class="flex justify-between"><span>Sábado:</span> <span>09:00 - 16:00</span></li>
@@ -511,26 +513,26 @@
 
                 <!-- Contact Us -->
                 <div>
-                    <h4 class="font-bold text-lg mb-6">Fale Conosco</h4>
+                    <h3 class="font-bold text-lg mb-6">Fale Conosco</h3>
                     <ul class="space-y-4 text-light text-sm">
                         <li class="flex gap-3">
-                            <i class="fa-solid fa-location-dot mt-1 text-primary"></i>
-                            <span>Av. Tanquedro, 1000, Bela Vista, Cuibá, MT.</span>
+                            <i class="fa-solid fa-location-dot mt-1 text-primary" aria-hidden="true"></i>
+                            <span>Av. Tancredo Neves, 1000, Centro, Cuiabá, MT.</span>
                         </li>
                         <li class="flex gap-3 items-center">
-                            <i class="fa-solid fa-phone text-primary"></i>
+                            <i class="fa-solid fa-phone text-primary" aria-hidden="true"></i>
                             <span>(65) 99999-1234</span>
                         </li>
                         <li class="flex gap-3 items-center">
-                            <i class="fa-solid fa-envelope text-primary"></i>
-                            <span>contato@pixelpart.co</span>
+                            <i class="fa-solid fa-envelope text-primary" aria-hidden="true"></i>
+                            <span>contato@pizzaria.com</span>
                         </li>
                     </ul>
                 </div>
 
                 <!-- Subscribe -->
                 <div>
-                    <h4 class="font-bold text-lg mb-6">Inscreva-se</h4>
+                    <h3 class="font-bold text-lg mb-6">Inscreva-se</h3>
                     <form class="relative" action="#" method="POST" onsubmit="event.preventDefault();">
                         <label for="newsletter-email" class="sr-only">Digite seu e-mail</label>
                         <input id="newsletter-email" name="email" type="email" placeholder="Digite seu e-mail" required class="w-full bg-gray-50 rounded-full py-3 px-6 text-sm outline-none focus:ring-2 focus:ring-primary/50 transition">
